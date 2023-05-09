@@ -5,6 +5,10 @@
     {
       "library": "bootstrap@5.2.3",
       "destination": "lib/bootstrap/"
+    },
+    {
+      "library": "bootstrap-icons@1.10.5",
+      "destination": "lib/bootstrap-icons/"
     }
   ]
 }

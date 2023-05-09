@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="raamen.View.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta
+        name='viewport'
+        content='initial-scale=1, width=device-width' />
+    <meta property='og:type' content='website' />
+    <meta
+        property='og:description'
+        content='Raamen' />
+    <meta
+        name='description'
+        content='Raamen' />
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="margin: 0; padding: 0">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script src="/lib/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>
