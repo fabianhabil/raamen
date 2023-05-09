@@ -14,11 +14,11 @@ namespace raamen.Model
     
     public partial class Detail
     {
-        public Nullable<int> HeaderId { get; set; }
-        public Nullable<int> RamenId { get; set; }
+        public int HeaderId { get; set; }
+        public int RamenId { get; set; }
         public int Quantity { get; set; }
     
         public virtual Header Header { get; set; }
-        public virtual Raman Raman { get; set; }
+        public virtual Ramen Raman { get; set; }
     }
 }

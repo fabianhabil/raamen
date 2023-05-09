@@ -21,8 +21,8 @@ namespace raamen.Model
         }
     
         public int Id { get; set; }
-        public int CustomerID { get; set; }
-        public int StaffID { get; set; }
+        public int CustomerId { get; set; }
+        public int StaffId { get; set; }
         public System.DateTime Date { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

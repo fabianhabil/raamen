@@ -12,10 +12,10 @@ namespace raamen.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Raman
+    public partial class Ramen
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Raman()
+        public Ramen()
         {
             this.Details = new HashSet<Detail>();
         }
@@ -23,11 +23,11 @@ namespace raamen.Model
         public int Id { get; set; }
         public Nullable<int> MeatId { get; set; }
         public string Name { get; set; }
-        public string Borth { get; set; }
+        public string Broth { get; set; }
         public int Price { get; set; }
     
-        public virtual Meat Meat { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Detail> Details { get; set; }
+        public virtual Meat Meat { get; set; }
     }
 }
