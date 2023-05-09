@@ -103,8 +103,8 @@
     <Content Include="lib\bootstrap\js\bootstrap.min.js" />
     <Content Include="Model\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
       <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model\Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -116,6 +116,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\DetailFactory.cs" />
+    <Compile Include="Factory\HeaderFactory.cs" />
+    <Compile Include="Factory\MeatFactory.cs" />
+    <Compile Include="Factory\RamenFactory.cs" />
+    <Compile Include="Factory\RoleFactory.cs" />
+    <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Model\Detail.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -140,7 +146,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\Raman.cs">
+    <Compile Include="Model\Ramen.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Role.cs">
@@ -166,13 +172,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Model\Model.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Model\Model.edmx.diagram">
-      <DependentUpon>Model.edmx</DependentUpon>
-    </Content>
     <Content Include="libman.json" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.css.map" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.min.css.map" />
@@ -284,6 +283,13 @@
     <Content Include="lib\bootstrap\scss\mixins\_visually-hidden.scss" />
     <Content Include="lib\bootstrap\scss\utilities\_api.scss" />
     <Content Include="lib\bootstrap\scss\vendor\_rfs.scss" />
+    <EntityDeploy Include="Model\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -292,12 +298,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Factory\" />
-    <Folder Include="Handler\" />
-    <Folder Include="Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
