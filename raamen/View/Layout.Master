@@ -14,16 +14,32 @@
     <meta
         name='description'
         content='Raamen' />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/reset.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="margin: 0; padding: 0">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+        <div style="margin: 0; padding: 0" class="d-flex flex-column">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="d-flex flex-row align-items-center container-xl justify-content-between" style="color: white; height: 8vh; width: 100%">
+                    <a style="width: auto; height: 95%" href="~/View/Home.aspx">
+                        <img src="/wwwroot/assets/logo.png" style="width: auto; height: 95%" />
+                    </a>
+                    <div class="d-flex flex-row gap-4">
+                        <a class="navbar-link">Home</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-xl pt-3">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
         </div>
     </form>
     <script src="/lib/bootstrap/js/bootstrap.bundle.js"></script>
