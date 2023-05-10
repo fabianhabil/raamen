@@ -2069,10 +2069,13 @@
     </Content>
     <Content Include="View\Home.aspx" />
     <Content Include="View\Login.aspx" />
+    <Content Include="View\Register.aspx" />
     <Content Include="Web.config" />
+    <Content Include="wwwroot\css\login.css" />
     <Content Include="wwwroot\css\reset.css" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Factory\DetailFactory.cs" />
     <Compile Include="Factory\HeaderFactory.cs" />
     <Compile Include="Factory\MeatFactory.cs" />
@@ -2113,6 +2116,8 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Handler\UserHandler.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="View\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2133,6 +2138,13 @@
     </Compile>
     <Compile Include="View\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
