@@ -2,13 +2,15 @@
 
 namespace raamen.Factory {
     public class UserFactory {
-        public User create(int roleId, string username, string email, string gender, string password) {
+        public static User create(string username, string email, string gender, string password, int roleId) {
             User user = new User();
-            user.Roleid = roleId;
             user.Username = username;
             user.Email = email;
             user.Gender = gender;
             user.Password = password;
+
+            // 1 = Member, 2 = Staff, 3 = Admin
+            user.Roleid = roleId;
 
             return user;
         }

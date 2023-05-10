@@ -2,7 +2,7 @@
 
 namespace raamen.Factory {
     public class MeatFactory {
-        public Meat create(string name) {
+        public static Meat create(string name) {
             Meat meat = new Meat();
             meat.Name = name;
 
