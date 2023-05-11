@@ -13,13 +13,13 @@ namespace raamen.View {
     public partial class Login {
 
         /// <summary>
-        /// noticeLbl control.
+        /// errorLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label noticeLbl;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorLbl;
 
         /// <summary>
         /// usernameTextbox control.

@@ -7,10 +7,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="min-height: 88vh" class="d-flex flex-column justify-content-center">
         <div class="form-wrapper">
-            <asp:Label ID="noticeLbl" runat="server" Text="" CssClass="mb-10"></asp:Label>
+            <div class="alert alert-danger" role="alert" runat="server" id="errorLbl" runat="server" visible="false">
+            </div>
             <div class="my-3">
                 <label for="usernameTextbox" class="form-label">Username</label>
-                <asp:TextBox ID="usernameTextbox" runat="server" placeholder="lorem_ipsum" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="usernameTextbox" runat="server" placeholder="loremipsum" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="mb-3">
                 <label for="passwordTextbox" class="form-label">Password</label>
