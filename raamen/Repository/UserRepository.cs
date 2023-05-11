@@ -1,5 +1,7 @@
 ﻿using raamen.Factory;
 using raamen.Model;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace raamen.Repository {
     public class UserRepository {
@@ -10,6 +12,24 @@ namespace raamen.Repository {
             db.SaveChanges();
 
             return "Register Success!";
+        }
+
+        public static User getByUsername(string username) {
+            return (from u in db.Users where u.Username == username select u).FirstOrDefault();
+        }
+
+        public static string update(string oldUsername, string newUsername, string email, string gender) {
+            User user = getByUsername(oldUsername);
+            user.Username = newUsername;
+            user.Email = email;
+            user.Gender = gender;
+
+            db.SaveChanges();
+            return "User Updated!";
+        }
+
+        public static List<User> getByRole(int roleId) {
+            return (from u in db.Users where u.Roleid == roleId select u).ToList<User>();
         }
     }
 }

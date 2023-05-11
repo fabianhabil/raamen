@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/Layout.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="raamen.View.Register" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/Layout.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="raamen.View.Profile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Register - Raamen</title>
-    <link rel="stylesheet" href="../wwwroot/css/login.css" />
-
+    <title>Profile - Raamen</title>
+    <link rel="stylesheet" href="../wwwroot/css/profile.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="min-height: 88vh" class="d-flex flex-column justify-content-center">
@@ -29,17 +28,10 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="passwordTextbox" class="form-label">Password</label>
-                <asp:TextBox ID="passwordTextbox" runat="server" placeholder="Password" CssClass="form-control" type="password"></asp:TextBox>
+                <label for="passwordTextbox" class="form-label">Current Password</label>
+                <asp:TextBox ID="passwordTextbox" runat="server" placeholder="Current Password" CssClass="form-control" type="password"></asp:TextBox>
             </div>
-            <div class="mb-3">
-                <label for="passconfTextbox" class="form-label">Confirm Password</label>
-                <asp:TextBox ID="passconfTextbox" runat="server" placeholder="Confirm Password" CssClass="form-control" type="password"></asp:TextBox>
-            </div>
-            <asp:Button ID="registerBtn" runat="server" Text="Register" CssClass="btn btn-primary btn-block w-100 mb-3" OnClick="registerBtn_Click" />
-            <div class="text-center">
-                <p>Already have an account? <a class="register" href="Login.aspx">Login</a></p>
-            </div>
+            <asp:Button ID="updateBtn" runat="server" Text="Register" CssClass="btn btn-primary btn-block w-100 mb-3" OnClick="updateBtn_Click" />
         </div>
     </div>
 </asp:Content>
