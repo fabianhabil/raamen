@@ -20,10 +20,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="~/wwwroot/css/reset.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/global.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body onkeydown="return (event.keyCode!=13)">
     <form id="form1" runat="server">
         <div style="margin: 0; padding: 0" class="d-flex flex-column">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -33,24 +34,25 @@
                     </a>
                     <div class="d-flex flex-row gap-2 align-items-center">
                         <div class="d-flex flex-row gap-4" id="nav_user" runat="server" visible="false">
-                            <a class="navbar-link">Order Ramen</a>
-                            <a class="navbar-link">History</a>
+                            <a class="navbar-link" href="Order.aspx">Order Ramen</a>
+                            <a class="navbar-link" href="History.aspx">History</a>
                         </div>
                         <div class="d-flex flex-row gap-4" id="nav_staff" runat="server" visible="false">
                             <a class="navbar-link" href="Home.aspx">Home</a>
-                            <a class="navbar-link">Manage Ramen</a>
-                            <a class="navbar-link">Order Queue</a>
+                            <a class="navbar-link" href="ManageRamen.aspx">Manage Ramen</a>
+                            <a class="navbar-link" href="OrderQueue.aspx">Order Queue</a>
                         </div>
                         <div class="d-flex flex-row gap-4" id="nav_admin" runat="server" visible="false">
                             <a class="navbar-link" href="Home.aspx">Home</a>
-                            <a class="navbar-link">Manage Ramen</a>
-                            <a class="navbar-link">Order Queue</a>
-                            <a class="navbar-link">History</a>
-                            <a class="navbar-link">Report</a>
+                            <a class="navbar-link" href="ManageRamen.aspx">Manage Ramen</a>
+                            <a class="navbar-link" href="OrderQueue.aspx">Order Queue</a>
+                            <a class="navbar-link" href="History.aspx">History</a>
+                            <a class="navbar-link" href="Report.aspx">Report</a>
                         </div>
                         <div class="d-flex flex-row gap-4" id="nav_guest" runat="server" visible="false">
                             <a class="navbar-link" href="Home.aspx">Home</a>
                             <a class="navbar-link" href="Login.aspx">Login</a>
+                            <a class="navbar-link" href="Register.aspx">Register</a>
                         </div>
                         <div id="nav_loggedin" runat="server" visible="true">
                             <div class="dropdown">

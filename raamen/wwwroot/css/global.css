@@ -1,0 +1,39 @@
+﻿.form-wrapper {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:900px) {
+    .form-wrapper {
+        width: 70%
+    }
+
+    .table-wrapper {
+        width: 70%
+    }
+}
+
+@media (max-width:600px) {
+    .form-wrapper {
+        width: 80%;
+    }
+
+    .table-wrapper {
+        width: 80%;
+    }
+}
+
+.save-btn {
+    color: #0d6efd;
+}
+
+    .save-btn:hover {
+        color: rgba(13, 110, 253, 0.5);
+    }
+
+.table-wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}

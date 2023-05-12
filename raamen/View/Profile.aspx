@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Profile - Raamen</title>
-    <link rel="stylesheet" href="../wwwroot/css/profile.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="min-height: 88vh" class="d-flex flex-column justify-content-center">

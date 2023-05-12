@@ -1,6 +1,7 @@
 ﻿using raamen.Controller;
 using raamen.Model;
 using System;
+using System.Linq;
 
 namespace raamen.View {
     public partial class Home : System.Web.UI.Page {
@@ -13,7 +14,7 @@ namespace raamen.View {
                     return;
                 }
 
-                if (user.Role.Name.Equals("User")) {
+                if (user.Role.Name.Equals("Customer")) {
                     div_user.Visible = true;
                 }
 
@@ -25,6 +26,8 @@ namespace raamen.View {
 
                 if (user.Role.Name.Equals("Admin")) {
                     div_admin.Visible = true;
+                    user_staffGV.DataSource = UserController.getUserByRole(1).Concat(UserController.getUserByRole(2)).ToList<User>();
+                    user_staffGV.DataBind();
                 }
             }
         }

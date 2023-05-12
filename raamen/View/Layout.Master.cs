@@ -12,7 +12,7 @@ namespace raamen.View {
             }
             User user = UserController.getUserInfo();
 
-            if (user.Role.Name.Equals("User")) {
+            if (user.Role.Name.Equals("Customer")) {
                 nav_user.Visible = true;
             }
 

@@ -2067,17 +2067,23 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="View\AddMeat.aspx" />
+    <Content Include="View\AddRamen.aspx" />
+    <Content Include="View\EditMeat.aspx" />
+    <Content Include="View\EditRamen.aspx" />
     <Content Include="View\Home.aspx" />
     <Content Include="View\Login.aspx" />
+    <Content Include="View\ManageMeat.aspx" />
+    <Content Include="View\ManageRamen.aspx" />
     <Content Include="View\Profile.aspx" />
     <Content Include="View\Register.aspx" />
     <Content Include="Web.config" />
-    <Content Include="wwwroot\css\home.css" />
-    <Content Include="wwwroot\css\login.css" />
-    <Content Include="wwwroot\css\profile.css" />
+    <Content Include="wwwroot\css\global.css" />
     <Content Include="wwwroot\css\reset.css" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\MeatController.cs" />
+    <Compile Include="Controller\RamenController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Factory\DetailFactory.cs" />
     <Compile Include="Factory\HeaderFactory.cs" />
@@ -2085,6 +2091,8 @@
     <Compile Include="Factory\RamenFactory.cs" />
     <Compile Include="Factory\RoleFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
+    <Compile Include="Handler\MeatHandler.cs" />
+    <Compile Include="Handler\RamenHandler.cs" />
     <Compile Include="Model\Detail.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -2120,7 +2128,37 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Handler\UserHandler.cs" />
+    <Compile Include="Repository\MeatRepository.cs" />
+    <Compile Include="Repository\RamenRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="View\AddMeat.aspx.cs">
+      <DependentUpon>AddMeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\AddMeat.aspx.designer.cs">
+      <DependentUpon>AddMeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddRamen.aspx.cs">
+      <DependentUpon>AddRamen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\AddRamen.aspx.designer.cs">
+      <DependentUpon>AddRamen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditMeat.aspx.cs">
+      <DependentUpon>EditMeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\EditMeat.aspx.designer.cs">
+      <DependentUpon>EditMeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditRamen.aspx.cs">
+      <DependentUpon>EditRamen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\EditRamen.aspx.designer.cs">
+      <DependentUpon>EditRamen.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2141,6 +2179,20 @@
     </Compile>
     <Compile Include="View\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManageMeat.aspx.cs">
+      <DependentUpon>ManageMeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ManageMeat.aspx.designer.cs">
+      <DependentUpon>ManageMeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManageRamen.aspx.cs">
+      <DependentUpon>ManageRamen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ManageRamen.aspx.designer.cs">
+      <DependentUpon>ManageRamen.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>

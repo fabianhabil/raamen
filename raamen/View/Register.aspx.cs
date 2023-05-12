@@ -6,7 +6,6 @@ namespace raamen.View {
         protected void Page_Load(object sender, EventArgs e) {
             if (UserController.isLoggedIn()) {
                 Response.Redirect("Home.aspx");
-                return;
             }
         }
 
