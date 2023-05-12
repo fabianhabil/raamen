@@ -5,7 +5,6 @@ using System.Linq;
 namespace raamen.Repository {
     public class RamenRepository {
         static DatabaseEntities db = new DatabaseEntities();
-
         public static string add(int meatId, string name, string broth, int price) {
             Ramen ramen = new Ramen();
             ramen.MeatId = meatId;
@@ -20,11 +19,11 @@ namespace raamen.Repository {
         }
 
         public static List<Ramen> getAll() {
-            return (from r in db.Ramen1 select r).ToList<Ramen>();
+            return (from r in db.Ramen1.Include("Meat") select r).ToList<Ramen>();
         }
 
         public static Ramen get(int Id) {
-            return (from r in db.Ramen1 where r.Id == Id select r).FirstOrDefault();
+            return (from r in db.Ramen1.Include("Meat") where r.Id == Id select r).FirstOrDefault();
         }
 
         public static string update(int id, string name, string broth, int price, int meatId) {
