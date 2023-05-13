@@ -2075,6 +2075,7 @@
     <Content Include="View\Login.aspx" />
     <Content Include="View\ManageMeat.aspx" />
     <Content Include="View\ManageRamen.aspx" />
+    <Content Include="View\Order.aspx" />
     <Content Include="View\Profile.aspx" />
     <Content Include="View\Register.aspx" />
     <Content Include="Web.config" />
@@ -2193,6 +2194,13 @@
     </Compile>
     <Compile Include="View\ManageRamen.aspx.designer.cs">
       <DependentUpon>ManageRamen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>

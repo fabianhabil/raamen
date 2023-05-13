@@ -24,7 +24,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body onkeydown="return (event.keyCode!=13)">
+<body>
     <form id="form1" runat="server">
         <div style="margin: 0; padding: 0" class="d-flex flex-column">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

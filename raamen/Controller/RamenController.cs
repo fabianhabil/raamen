@@ -5,6 +5,25 @@ using System.Collections.Generic;
 
 namespace raamen.Controller {
     public class RamenController {
+        // UI State for cart.
+        public readonly static List<Ramen> cart = new List<Ramen>();
+
+        public static void addCart(Ramen ramen) {
+            cart.Add(ramen);
+        }
+
+        public static List<Ramen> getAllCart() {
+            return cart;
+        }
+
+        public static void deleteFromCart(int index) {
+            cart.RemoveAt(index);
+        }
+
+        public static void deleteCart() {
+            cart.Clear();
+        }
+
         public static string add(string meatName, string name, string borth, string price) {
             string validateRamen = validateRamenData(meatName, name, borth, price);
 

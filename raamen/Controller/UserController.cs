@@ -121,6 +121,7 @@ namespace raamen.Controller {
             HttpCookie cookie = HttpContext.Current.Request.Cookies["UserInfo"];
             cookie.Expires = DateTime.Now.AddDays(-1);
             HttpContext.Current.Response.Cookies.Add(cookie);
+            RamenController.deleteCart();
             HttpContext.Current.Response.Redirect("Home.aspx");
         }
 
