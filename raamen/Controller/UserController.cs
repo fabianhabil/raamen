@@ -104,7 +104,7 @@ namespace raamen.Controller {
                 setCookie(user.Username, user.Role.Name, 1);
             }
 
-            HttpContext.Current.Response.Redirect("Home.aspx");
+            HttpContext.Current.Response.Redirect("/");
 
             return "Login Success!";
         }
@@ -117,12 +117,17 @@ namespace raamen.Controller {
             HttpContext.Current.Response.Cookies.Add(cookie);
         }
 
-        public static void logout() {
+        public static void removeUserCookie() {
             HttpCookie cookie = HttpContext.Current.Request.Cookies["UserInfo"];
             cookie.Expires = DateTime.Now.AddDays(-1);
             HttpContext.Current.Response.Cookies.Add(cookie);
-            RamenController.deleteCart();
-            HttpContext.Current.Response.Redirect("Home.aspx");
+        }
+
+        public static void logout() {
+            removeUserCookie();
+            // Remove the cart session, we dont want another user's cart is the same
+            HttpContext.Current.Session.Remove("cart");
+            HttpContext.Current.Response.Redirect("/");
         }
 
         public static bool isLoggedIn() {
