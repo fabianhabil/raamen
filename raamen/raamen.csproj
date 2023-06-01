@@ -79,6 +79,7 @@
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <Content Include="Global.asax" />
     <Content Include="lib\bootstrap-icons\bootstrap-icons.svg" />
     <Content Include="lib\bootstrap-icons\font\bootstrap-icons.css" />
     <Content Include="lib\bootstrap-icons\font\bootstrap-icons.min.css" />
@@ -2083,6 +2084,7 @@
     <Content Include="wwwroot\css\reset.css" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controller\MeatController.cs" />
     <Compile Include="Controller\RamenController.cs" />
     <Compile Include="Controller\UserController.cs" />
@@ -2092,6 +2094,9 @@
     <Compile Include="Factory\RamenFactory.cs" />
     <Compile Include="Factory\RoleFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Handler\MeatHandler.cs" />
     <Compile Include="Handler\RamenHandler.cs" />
     <Compile Include="Model\Detail.cs">
