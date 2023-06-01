@@ -4,7 +4,7 @@
     <title>Order - Raamen</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="min-height: 88vh" class="d-flex flex-row justify-content-center gap-2 pb-2">
+    <div style="min-height: 88vh" class="d-flex flex-row justify-content-center gap-4 pb-2">
         <div class="d-flex flex-column gap-4" style="width: 65%">
             <asp:Repeater ID="ramenRepeater" runat="server">
                 <ItemTemplate>
@@ -31,6 +31,8 @@
             </asp:Repeater>
         </div>
         <div class="d-flex flex-column gap-3" style="width: 35%">
+            <div class="alert alert-success" role="alert" runat="server" id="successLbl" runat="server" visible="false">
+            </div>
             <p class="h3 text-center">
                 <i class="bi bi-bag-fill" style="padding-right: 8px"></i>Your Cart
             </p>

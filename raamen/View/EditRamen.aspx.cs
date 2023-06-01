@@ -7,17 +7,23 @@ namespace raamen.View {
     public partial class EditRamen : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
             if (!IsPostBack) {
+                User user = UserController.getUserInfo();
+
+                if (user == null || user.Role.Name.Equals("Customer")) {
+                    Response.Redirect("/");
+                }
+
                 string id = getIdParam();
 
                 if (id == null) {
-                    Response.Redirect("Home.aspx");
+                    Response.Redirect("/");
                     return;
                 }
 
                 Ramen ramen = RamenController.get(int.Parse(id));
 
                 if (ramen == null) {
-                    Response.Redirect("Home.aspx");
+                    Response.Redirect("/");
                     return;
                 }
 
@@ -47,7 +53,7 @@ namespace raamen.View {
                 errorLbl.Visible = false;
                 successLbl.Visible = true;
                 successLbl.InnerText = notice;
-                Response.Redirect("ManageRamen.aspx");
+                Response.Redirect("/ramen");
                 return;
             }
 

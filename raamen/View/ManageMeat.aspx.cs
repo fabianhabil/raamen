@@ -10,8 +10,7 @@ namespace raamen.View {
                 User user = UserController.getUserInfo();
 
                 if (user == null || user.Role.Name.Equals("Customer")) {
-                    Response.Redirect("Home.aspx");
-                    return;
+                    Response.Redirect("/");
                 }
 
                 loadData();
@@ -24,11 +23,11 @@ namespace raamen.View {
         }
 
         protected void addMeat_ServerClick(object sender, EventArgs e) {
-            Response.Redirect("AddMeat.aspx");
+            Response.Redirect("/meat/add");
         }
 
         protected void manageRamen_ServerClick(object sender, EventArgs e) {
-            Response.Redirect("ManageRamen.aspx");
+            Response.Redirect("/ramen");
         }
 
         protected void meatGV_RowDeleting(object sender, System.Web.UI.WebControls.GridViewDeleteEventArgs e) {
@@ -48,7 +47,7 @@ namespace raamen.View {
             GridViewRow row = meatGV.Rows[e.NewEditIndex];
             string id = row.Cells[0].Text.ToString();
 
-            Response.Redirect("EditMeat.aspx?id=" + id);
+            Response.Redirect("/meat/edit?id=" + id);
         }
     }
 }

@@ -6,17 +6,23 @@ namespace raamen.View {
     public partial class EditMeat : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
             if (!IsPostBack) {
+                User user = UserController.getUserInfo();
+
+                if (user == null || user.Role.Name.Equals("Customer")) {
+                    Response.Redirect("/");
+                }
+
                 string id = getIdParam();
 
                 if (id == null) {
-                    Response.Redirect("Home.aspx");
+                    Response.Redirect("/");
                     return;
                 }
 
                 Meat meat = MeatController.get(int.Parse(id));
 
                 if (meat == null) {
-                    Response.Redirect("Home.aspx");
+                    Response.Redirect("/");
                     return;
                 }
 
@@ -30,7 +36,7 @@ namespace raamen.View {
                 errorLbl.Visible = false;
                 successLbl.Visible = true;
                 successLbl.InnerText = notice;
-                Response.Redirect("ManageMeat.aspx");
+                Response.Redirect("/meat");
                 return;
             }
             errorLbl.Visible = true;

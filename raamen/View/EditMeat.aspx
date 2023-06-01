@@ -9,7 +9,7 @@
             <div class="alert alert-danger" role="alert" runat="server" id="errorLbl" runat="server" visible="false" />
             <div class="alert alert-success" role="alert" runat="server" id="successLbl" runat="server" visible="false" />
             <div class="my-3">
-                <a href="ManageMeat.aspx" class="btn m-0 p-0" role="button">
+                <a href="/meat" class="btn m-0 p-0" role="button">
                     <i class="bi bi-arrow-left" style="padding-right: 4px"></i>
                     Back
                 </a>

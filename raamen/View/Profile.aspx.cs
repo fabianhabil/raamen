@@ -6,7 +6,7 @@ namespace raamen.View {
     public partial class Profile : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
             if (!UserController.isLoggedIn()) {
-                Response.Redirect("Home.aspx");
+                Response.Redirect("/");
                 return;
             }
 

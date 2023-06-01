@@ -6,30 +6,43 @@ using System.Web.UI.WebControls;
 
 namespace raamen.View {
     public partial class Order : System.Web.UI.Page {
-        public static List<Ramen> ramen { get { return RamenController.getAll(); } }
-        public static List<Ramen> cart { get { return RamenController.getAllCart(); } }
+        public List<Ramen> ramen { get { return RamenController.getAll(); } }
+        public List<Ramen> cart {
+            get {
+                if (Session["cart"] == null) {
+                    Session["cart"] = new List<Ramen>();
+                }
+                return (List<Ramen>)Session["cart"];
+            }
+            set { Session["cart"] = value; }
+        }
 
         protected void Page_Load(object sender, EventArgs e) {
             if (!IsPostBack) {
+                User user = UserController.getUserInfo();
+
+                if (user == null || !user.Role.Name.Equals("Customer")) {
+                    Response.Redirect("/");
+                }
+
                 ramenRepeater.DataSource = ramen;
                 ramenRepeater.DataBind();
 
                 testRepeater.DataSource = cart;
                 testRepeater.DataBind();
             }
-
         }
 
         protected void buyBtn_Click(object sender, EventArgs e) {
             LinkButton btn = (LinkButton)sender;
             string value = btn.CommandArgument.ToString();
-            RamenController.addCart(ramen[int.Parse(value)]);
-            Response.Redirect("Order.aspx");
+            cart.Add(ramen[int.Parse(value)]);
+            Response.Redirect("/order");
         }
 
         protected void deleteCartBtn_Click(object sender, EventArgs e) {
-            RamenController.deleteCart();
-            Response.Redirect("Order.aspx");
+            cart.Clear();
+            Response.Redirect("/order");
         }
 
         protected void buyCartBtn_Click(object sender, EventArgs e) {
