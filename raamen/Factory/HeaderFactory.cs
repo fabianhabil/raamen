@@ -3,11 +3,10 @@ using System;
 
 namespace raamen.Factory {
     public class HeaderFactory {
-        public static Header create(int customerId, int staffId, DateTime date) {
+        public static Header create(int customerId) {
             Header header = new Header();
             header.CustomerId = customerId;
-            header.StaffId = staffId;
-            header.Date = date;
+            header.Date = DateTime.Now;
 
             return header;
         }

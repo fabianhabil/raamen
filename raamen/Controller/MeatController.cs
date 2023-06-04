@@ -1,23 +1,17 @@
 ﻿using raamen.Handler;
 using raamen.Model;
-using System;
 using System.Collections.Generic;
 
 namespace raamen.Controller {
     public class MeatController {
         public static string add(string name) {
-            if (String.IsNullOrEmpty(name)) {
+            if (string.IsNullOrEmpty(name)) {
                 return "Please fill all the fields!";
-            }
-
-            Meat checkMeat = MeatHandler.getByName(name);
-
-            if (checkMeat != null) {
-                return name + " Meat is registered! Please choose another name!";
             }
 
             return MeatHandler.add(name);
         }
+
         public static Meat get(int Id) {
             return MeatHandler.get(Id);
         }
@@ -27,14 +21,7 @@ namespace raamen.Controller {
         }
 
         public static List<string> getAllMeatString() {
-            List<Meat> meats = MeatHandler.getAll();
-            List<string> meatString = new List<string>();
-            meatString.Add("Select Meat");
-            foreach (Meat m in meats) {
-                meatString.Add(m.Name);
-            }
-
-            return meatString;
+            return MeatHandler.getAllMeatString();
         }
 
         public static Meat getByName(string name) {
@@ -42,14 +29,8 @@ namespace raamen.Controller {
         }
 
         public static string update(int Id, string name) {
-            if (String.IsNullOrEmpty(name)) {
+            if (string.IsNullOrEmpty(name)) {
                 return "Please fill all the fields!";
-            }
-
-            Meat checkMeat = MeatHandler.getByName(name);
-
-            if (checkMeat != null) {
-                return name + " Meat is registered! Please choose another name!";
             }
 
             return MeatHandler.update(Id, name);

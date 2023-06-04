@@ -10,6 +10,7 @@ namespace raamen.View {
                 nav_loggedin.Visible = false;
                 return;
             }
+
             User user = UserController.getUserInfo();
 
             if (user.Role.Name.Equals("Customer")) {

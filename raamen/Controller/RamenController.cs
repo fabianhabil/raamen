@@ -1,6 +1,5 @@
 ﻿using raamen.Handler;
 using raamen.Model;
-using System;
 using System.Collections.Generic;
 
 namespace raamen.Controller {
@@ -12,13 +11,11 @@ namespace raamen.Controller {
                 return validateRamen;
             }
 
-            int meatId = MeatController.getByName(meatName).Id;
-
-            return RamenHandler.add(meatId, name, borth, int.Parse(price));
+            return RamenHandler.add(name, borth, int.Parse(price));
         }
 
         public static string validateRamenData(string meatName, string name, string borth, string price) {
-            if (String.IsNullOrEmpty(name) || String.IsNullOrEmpty(borth) || String.IsNullOrEmpty(price)) {
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(borth) || string.IsNullOrEmpty(price)) {
                 return "Please fill all the fields!";
             }
 
@@ -68,9 +65,7 @@ namespace raamen.Controller {
                 return validateRamen;
             }
 
-            int meatId = MeatController.getByName(meatName).Id;
-
-            return RamenHandler.update(id, name, broth, int.Parse(price), meatId);
+            return RamenHandler.update(id, name, broth, int.Parse(price));
         }
     }
 }

@@ -26,7 +26,7 @@ namespace raamen.View {
 
                 if (user.Role.Name.Equals("Admin")) {
                     div_admin.Visible = true;
-                    user_staffGV.DataSource = UserController.getUserByRole(1).Concat(UserController.getUserByRole(2)).ToList<User>();
+                    user_staffGV.DataSource = UserController.getUserByRole(2).Concat(UserController.getUserByRole(1)).ToList<User>();
                     user_staffGV.DataBind();
                 }
             }
