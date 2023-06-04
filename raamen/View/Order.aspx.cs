@@ -28,8 +28,8 @@ namespace raamen.View {
                 ramenRepeater.DataSource = ramen;
                 ramenRepeater.DataBind();
 
-                testRepeater.DataSource = cart;
-                testRepeater.DataBind();
+                cartRepeater.DataSource = cart;
+                cartRepeater.DataBind();
             }
         }
 
@@ -46,7 +46,9 @@ namespace raamen.View {
         }
 
         protected void buyCartBtn_Click(object sender, EventArgs e) {
-
+            successLbl.InnerText = OrderController.create(cart);
+            successLbl.Visible = true;
+            cart.Clear();
         }
     }
 }

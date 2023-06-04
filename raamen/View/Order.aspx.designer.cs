@@ -31,13 +31,13 @@ namespace raamen.View {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl successLbl;
 
         /// <summary>
-        /// testRepeater control.
+        /// cartRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater testRepeater;
+        protected global::System.Web.UI.WebControls.Repeater cartRepeater;
 
         /// <summary>
         /// buyCartBtn control.

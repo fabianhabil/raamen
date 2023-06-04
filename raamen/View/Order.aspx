@@ -36,7 +36,7 @@
             <p class="h3 text-center">
                 <i class="bi bi-bag-fill" style="padding-right: 8px"></i>Your Cart
             </p>
-            <asp:Repeater ID="testRepeater" runat="server">
+            <asp:Repeater ID="cartRepeater" runat="server">
                 <ItemTemplate>
                     <div class="d-flex flex-row justify-content-between">
                         <p class="font-cart"><%# Eval("Name")%></p>
