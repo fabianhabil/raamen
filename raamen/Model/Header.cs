@@ -7,24 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace raamen.Model
-{
+namespace raamen.Model {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Header
-    {
+
+    public partial class Header {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Header()
-        {
+        public Header() {
             this.Details = new HashSet<Detail>();
         }
-    
+
         public int Id { get; set; }
         public int CustomerId { get; set; }
-        public int StaffId { get; set; }
+        public int? StaffId { get; set; }
         public System.DateTime Date { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Detail> Details { get; set; }
         public virtual User User { get; set; }
