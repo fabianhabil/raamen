@@ -36,10 +36,10 @@ namespace raamen.Controller {
             }
 
             // Regex obtained from stackoverflow.
-            bool isStringContainNumber = Regex.IsMatch(username, @"^[a-zA-Z]+$");
+            bool isStringContainNumber = Regex.IsMatch(username, "^[A-Za-z ]*$");
 
             if (!isStringContainNumber) {
-                return "Username can only contains alphabet!";
+                return "Username can only contains alphabet and space!";
             }
 
             return null;
