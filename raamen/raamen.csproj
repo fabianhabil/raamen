@@ -2072,6 +2072,7 @@
     <Content Include="View\AddRamen.aspx" />
     <Content Include="View\EditMeat.aspx" />
     <Content Include="View\EditRamen.aspx" />
+    <Content Include="View\History.aspx" />
     <Content Include="View\Home.aspx" />
     <Content Include="View\Login.aspx" />
     <Content Include="View\ManageMeat.aspx" />
@@ -2086,7 +2087,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controller\MeatController.cs" />
-    <Compile Include="Controller\OrderController.cs" />
+    <Compile Include="Controller\TransactionController.cs" />
     <Compile Include="Controller\RamenController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Factory\DetailFactory.cs" />
@@ -2099,7 +2100,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Handler\MeatHandler.cs" />
-    <Compile Include="Handler\OrderHandler.cs" />
+    <Compile Include="Handler\TransactionHandler.cs" />
     <Compile Include="Handler\RamenHandler.cs" />
     <Compile Include="Model\Detail.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -2169,6 +2170,13 @@
     <Compile Include="View\EditRamen.aspx.designer.cs">
       <DependentUpon>EditRamen.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2228,13 +2236,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="libman.json" />
-    <EntityDeploy Include="Model\Model.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Model\Model.edmx.diagram">
-      <DependentUpon>Model.edmx</DependentUpon>
-    </Content>
     <Content Include="lib\bootstrap\css\bootstrap-grid.css.map" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.min.css.map" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.rtl.css.map" />
@@ -2348,6 +2349,13 @@
     <Content Include="lib\bootstrap-icons\font\fonts\bootstrap-icons.woff2" />
     <Content Include="lib\bootstrap\scss\utilities\_api.scss" />
     <Content Include="lib\bootstrap\scss\vendor\_rfs.scss" />
+    <EntityDeploy Include="Model\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="View\Layout.Master" />
     <None Include="Web.Debug.config">
