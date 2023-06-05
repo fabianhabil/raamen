@@ -10,7 +10,7 @@ namespace raamen.Factory {
             user.Password = password;
 
             // 1 = Member, 2 = Staff, 3 = Admin
-            user.Roleid = roleId;
+            user.RoleId = roleId;
 
             return user;
         }

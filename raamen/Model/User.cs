@@ -22,7 +22,7 @@ namespace raamen.Model
         }
     
         public int Id { get; set; }
-        public int Roleid { get; set; }
+        public int RoleId { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
         public string Gender { get; set; }

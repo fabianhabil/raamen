@@ -29,7 +29,7 @@ namespace raamen.Repository {
         }
 
         public static List<User> getByRole(int roleId) {
-            return (from u in db.Users where u.Roleid == roleId select u).ToList<User>();
+            return (from u in db.Users where u.RoleId == roleId select u).ToList<User>();
         }
     }
 }
