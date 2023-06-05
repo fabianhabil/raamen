@@ -31,6 +31,15 @@ namespace raamen.View {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl userNotice;
 
         /// <summary>
+        /// noTransactionUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl noTransactionUser;
+
+        /// <summary>
         /// userGV control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace raamen.View {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_admin;
+
+        /// <summary>
+        /// noTransactionAdmin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl noTransactionAdmin;
 
         /// <summary>
         /// adminGV control.
