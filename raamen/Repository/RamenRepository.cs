@@ -19,15 +19,14 @@ namespace raamen.Repository {
         }
 
         public static List<Ramen> getAll() {
-            // Reinstatiate DatabaseEntities, in case record from Meat table is updated
-            // so its updated.
+            // Reinstatiate DatabaseEntities, in case record from another table is updated
             db = new DatabaseEntities();
             return (from r in db.Ramen1.Include("Meat") select r).ToList<Ramen>();
         }
 
         public static Ramen get(int Id) {
-            // Reinstatiate DatabaseEntities, in case record from Meat table is updated
-            // so its updated.
+            // Reinstatiate DatabaseEntities, in case record from another table is updated
+            db = new DatabaseEntities();
             return (from r in db.Ramen1.Include("Meat") where r.Id == Id select r).FirstOrDefault();
         }
 

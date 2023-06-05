@@ -46,7 +46,7 @@ namespace raamen.View {
         }
 
         protected void buyCartBtn_Click(object sender, EventArgs e) {
-            successLbl.InnerText = OrderController.create(cart);
+            successLbl.InnerText = TransactionController.create(cart);
             successLbl.Visible = true;
             cart.Clear();
         }
