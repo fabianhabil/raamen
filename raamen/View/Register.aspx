@@ -12,7 +12,7 @@
             </div>
             <div class="my-3">
                 <label for="usernameTextbox" class="form-label">Username</label>
-                <asp:TextBox ID="usernameTextbox" runat="server" placeholder="loremipsum" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="usernameTextbox" runat="server" placeholder="Only alphabet and can contains space" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="mb-3">
                 <label for="emailTextbox" class="form-label">Email</label>
@@ -36,7 +36,7 @@
             </div>
             <asp:Button ID="registerBtn" runat="server" Text="Register" CssClass="btn btn-primary btn-block w-100 mb-3" OnClick="registerBtn_Click" />
             <div class="text-center">
-                <p>Already have an account? <a class="register" href="Login.aspx">Login</a></p>
+                <p>Already have an account? <a class="register" href="/login" style="color: #0d6efd;">Login</a></p>
             </div>
         </div>
     </div>
