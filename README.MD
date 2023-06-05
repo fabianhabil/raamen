@@ -1,4 +1,4 @@
-# Raamen - Final Project Pattern Software Design
+# Raamen - Final Project Pattern Software Design - BG01
 
 ## Important Notes To Run the Project
 
@@ -6,7 +6,5 @@
 2. Restore the Client-side Libraries (Right click at libman.json)
 3. Run the project!
 
-## Entity-Relationship Diagram
-
-Overall, the ERD is the same from ERD that given from the case. Added one column (Total) in Header table for total Price in one transaction <br>
-![ERD](.github/erd.jpg)
+## Group 2 - f86ff0b1-e1ce-ed11-ae31-d8d385fce79e
+1. Fabian Habil Ramdhan - 2501976503

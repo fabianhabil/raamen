@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Detail">
           <Key>
             <PropertyRef Name="HeaderId" />
@@ -22,7 +22,6 @@
           <Property Name="CustomerID" Type="int" Nullable="false" />
           <Property Name="StaffID" Type="int" />
           <Property Name="Date" Type="datetime" Nullable="false" />
-          <Property Name="Total" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Meat">
           <Key>
@@ -171,8 +170,7 @@
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -195,7 +193,6 @@
           <Property Name="CustomerId" Type="Int32" Nullable="false" />
           <Property Name="StaffId" Type="Int32" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Total" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Details" Relationship="Self.FK__Detail__HeaderId__4D94879B" FromRole="Header" ToRole="Detail" />
           <NavigationProperty Name="Customer" Relationship="Self.FK__Header__Customer__44FF419A" FromRole="Header" ToRole="User" />
           <NavigationProperty Name="Staff" Relationship="Self.FK__Header__StaffID__5AEE82B9" FromRole="Header" ToRole="User" />
@@ -376,7 +373,6 @@
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerID" />
                 <ScalarProperty Name="StaffId" ColumnName="StaffID" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="Total" ColumnName="Total" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
