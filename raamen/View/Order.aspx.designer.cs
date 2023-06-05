@@ -13,6 +13,15 @@ namespace raamen.View {
     public partial class Order {
 
         /// <summary>
+        /// noItemAvailable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl noItemAvailable;
+
+        /// <summary>
         /// ramenRepeater control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace raamen.View {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl successLbl;
+
+        /// <summary>
+        /// errorLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorLbl;
 
         /// <summary>
         /// cartRepeater control.

@@ -25,6 +25,10 @@ namespace raamen.View {
                     Response.Redirect("/");
                 }
 
+                if (ramen.Count == 0) {
+                    noItemAvailable.Visible = true;
+                }
+
                 ramenRepeater.DataSource = ramen;
                 ramenRepeater.DataBind();
 
@@ -46,7 +50,14 @@ namespace raamen.View {
         }
 
         protected void buyCartBtn_Click(object sender, EventArgs e) {
+            if (cart.Count == 0 || cart == null) {
+                successLbl.Visible = false;
+                errorLbl.Visible = true;
+                errorLbl.InnerText = "Please add some item to cart!";
+                return;
+            }
             successLbl.InnerText = TransactionController.create(cart);
+            errorLbl.Visible = false;
             successLbl.Visible = true;
             cart.Clear();
         }
