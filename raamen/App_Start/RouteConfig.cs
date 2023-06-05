@@ -15,6 +15,9 @@ namespace raamen.App_Start {
             routes.MapPageRoute("Profile", "profile", "~/View/Profile.aspx");
             routes.MapPageRoute("Register", "register", "~/View/Register.aspx");
             routes.MapPageRoute("History", "history", "~/View/History.aspx");
+            routes.MapPageRoute("View History", "history/view", "~/View/ViewHistory.aspx");
+            routes.MapPageRoute("Handle Order", "order/queue", "~/View/HandleOrder.aspx");
+            routes.MapPageRoute("Report", "report", "~/View/Report.aspx");
         }
     }
 }
