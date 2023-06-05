@@ -30,15 +30,20 @@ namespace raamen.Repository {
             // Reinstatiate DatabaseEntities, in case record from another table is updated
             db = new DatabaseEntities();
             return (from h in db.Headers where h.Id == headerId select h).FirstOrDefault();
-
         }
 
-        public static string editTotalHeader(int totalPrice, int headerId) {
+        public static List<Header> getUnhandledTransaction() {
+            // Reinstatiate DatabaseEntities, in case record from another table is updated
+            db = new DatabaseEntities();
+            return (from h in db.Headers where h.Staff == null select h).ToList<Header>();
+        }
+
+        public static string handleTransaction(int headerId, int staffId) {
             Header header = get(headerId);
-            header.Total = totalPrice;
+            header.StaffId = staffId;
 
             db.SaveChanges();
-            return "Order Successful!";
+            return "Transaction ID " + headerId + " successfully handled by Staff with ID " + staffId;
         }
     }
 }
