@@ -6,6 +6,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="min-height: 88vh" class="d-flex flex-row justify-content-center gap-4 pb-2">
         <div class="d-flex flex-column gap-4" style="width: 65%">
+            <p class="h4" id="noItemAvailable" runat="server" visible="false">
+                There is no item available yet 😐😖
+            </p>
             <asp:Repeater ID="ramenRepeater" runat="server">
                 <ItemTemplate>
                     <div class="d-flex flex-row align-items-center">
@@ -31,7 +34,9 @@
             </asp:Repeater>
         </div>
         <div class="d-flex flex-column gap-3" style="width: 35%">
-            <div class="alert alert-success" role="alert" runat="server" id="successLbl" runat="server" visible="false">
+            <div class="alert alert-success" role="alert" runat="server" id="successLbl" visible="false">
+            </div>
+            <div class="alert alert-danger" role="alert" runat="server" id="errorLbl" visible="false">
             </div>
             <p class="h3 text-center">
                 <i class="bi bi-bag-fill" style="padding-right: 8px"></i>Your Cart

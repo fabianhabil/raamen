@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Login - Raamen</title>
-    <link rel="stylesheet" href="../wwwroot/css/login.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="min-height: 88vh" class="d-flex flex-column justify-content-center">
@@ -25,7 +24,7 @@
             </div>
             <asp:Button ID="loginBtn" runat="server" Text="Login" CssClass="btn btn-primary btn-block w-100 mb-3" OnClick="loginBtn_Click" />
             <div class="text-center">
-                <p>Not a member? <a class="register" href="Register.aspx">Register</a></p>
+                <p>Not a member? <a class="register" href="/register" style="color: #0d6efd;">Register</a></p>
             </div>
         </div>
     </div>
