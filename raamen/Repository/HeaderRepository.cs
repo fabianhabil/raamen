@@ -38,6 +38,12 @@ namespace raamen.Repository {
             return (from h in db.Headers where h.Staff == null select h).ToList<Header>();
         }
 
+        public static List<Header> getHandledTransaction() {
+            // Reinstatiate DatabaseEntities, in case record from another table is updated
+            db = new DatabaseEntities();
+            return (from h in db.Headers where h.Staff != null select h).ToList<Header>();
+        }
+
         public static string handleTransaction(int headerId, int staffId) {
             Header header = get(headerId);
             header.StaffId = staffId;

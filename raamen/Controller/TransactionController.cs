@@ -24,6 +24,10 @@ namespace raamen.Controller {
             return TransactionHandler.getUnhandledTransaction();
         }
 
+        public static List<Header> getHandledTransaction() {
+            return TransactionHandler.getHandledTransaction();
+        }
+
         public static string handleTransaction(int headerId) {
             return TransactionHandler.handleTransaction(headerId);
         }

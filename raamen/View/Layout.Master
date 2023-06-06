@@ -47,7 +47,7 @@
                             <a class="navbar-link" href="/ramen">Manage Ramen</a>
                             <a class="navbar-link" href="/order/queue">Order Queue</a>
                             <a class="navbar-link" href="/history">History</a>
-                            <a class="navbar-link" href="/report">Report</a>
+                            <a class="navbar-link" href="/crystalreport">Report</a>
                         </div>
                         <div class="d-flex flex-row gap-4" id="nav_guest" runat="server" visible="false">
                             <a class="navbar-link" href="/">Home</a>

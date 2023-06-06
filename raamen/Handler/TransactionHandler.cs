@@ -57,6 +57,10 @@ namespace raamen.Handler {
             return HeaderRepository.getUnhandledTransaction();
         }
 
+        public static List<Header> getHandledTransaction() {
+            return HeaderRepository.getHandledTransaction();
+        }
+
         public static string handleTransaction(int headerId) {
             User user = UserHandler.getUserInfo();
 

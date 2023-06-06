@@ -22,9 +22,9 @@ namespace raamen {
             }
 
             if (rememberMe) {
-                setCookie(user.Username, user.Role.Name, 30);
+                setCookie(user.Username, user.Id, 30);
             } else {
-                setCookie(user.Username, user.Role.Name, 1);
+                setCookie(user.Username, user.Id, 1);
             }
 
             HttpContext.Current.Response.Redirect("/");
@@ -75,7 +75,7 @@ namespace raamen {
             }
 
             string notice = UserRepository.update(oldUsername, newUsername, email, gender);
-            setCookie(user.Username, user.Role.Name, 30);
+            setCookie(user.Username, user.Id, 30);
             return notice;
         }
 
@@ -83,10 +83,10 @@ namespace raamen {
             return UserRepository.getByRole(roleId);
         }
 
-        public static void setCookie(string username, string role, int daysExpire) {
+        public static void setCookie(string username, int userId, int daysExpire) {
             HttpCookie cookie = new HttpCookie("UserInfo");
             cookie["username"] = username;
-            cookie["role"] = role;
+            cookie["id"] = userId.ToString();
             cookie.Expires = DateTime.Now.AddDays(daysExpire);
             HttpContext.Current.Response.Cookies.Add(cookie);
         }
