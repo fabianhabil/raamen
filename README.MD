@@ -1,5 +1,10 @@
 # Raamen - Final Project Pattern Software Design - BG01
 
+## Package need to be installed to run the project
+1. This Database file version is 904, if your SQL Server version is below that, you cant open the database and query the sql query folder
+2. Make the database name is Database, to make sure the model layer is still connected to the database.
+2. Crysal Report for Visual Studio 2019
+
 ## Important Notes To Run the Project
 
 1. Make sure you installed Crystal Report for Visual Studio 2019
