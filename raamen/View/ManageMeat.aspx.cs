@@ -1,6 +1,7 @@
 ﻿using raamen.Controller;
 using raamen.Model;
 using System;
+using System.Collections.Generic;
 using System.Web.UI.WebControls;
 
 namespace raamen.View {
@@ -18,7 +19,13 @@ namespace raamen.View {
         }
 
         protected void loadData() {
-            meatGV.DataSource = MeatController.getAll();
+            List<Meat> meats = MeatController.getAll();
+
+            if (meats.Count == 0) {
+                noMeat.Visible = true;
+            }
+
+            meatGV.DataSource = meats;
             meatGV.DataBind();
         }
 

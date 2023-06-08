@@ -8,6 +8,9 @@
         <p class="h2">Handle Order</p>
         <div class="alert alert-success" role="alert" runat="server" id="successLbl" visible="false">
         </div>
+        <p class="h4" id="noQueue" runat="server" visible="false">
+            There is no Queue yet 😐😖
+        </p>
         <asp:GridView runat="server" ID="handleGV" CssClass="table table-striped table-bordered border-primary" EditRowStyle-CssClass="row" HeaderStyle-CssClass="table-dark" AutoGenerateColumns="False" OnRowEditing="handleGV_RowEditing" OnRowDataBound="handleGV_RowDataBound">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Transaction ID" />

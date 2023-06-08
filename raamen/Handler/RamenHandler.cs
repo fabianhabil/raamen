@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 namespace raamen.Handler {
     public class RamenHandler {
-        public static string add(string name, string broth, int price) {
-            int meatId = MeatRepository.getByName(name).Id;
+        public static string add(string meatName, string name, string broth, int price) {
+            int meatId = MeatRepository.getByName(meatName).Id;
 
             return RamenRepository.add(meatId, name, broth, price);
         }
@@ -18,8 +18,8 @@ namespace raamen.Handler {
             return RamenRepository.get(id);
         }
 
-        public static string update(int id, string name, string broth, int price) {
-            int meatId = MeatRepository.getByName(name).Id;
+        public static string update(int id, string meatName, string name, string broth, int price) {
+            int meatId = MeatRepository.getByName(meatName).Id;
 
             return RamenRepository.update(id, name, broth, price, meatId);
         }

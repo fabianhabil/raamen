@@ -15,18 +15,26 @@ namespace raamen.Repository {
         }
 
         public static Meat get(int Id) {
+            // Reinstatiate DatabaseEntities, in case record from another table is updated
+            db = new DatabaseEntities();
             return (from m in db.Meats where m.Id == Id select m).FirstOrDefault();
         }
 
         public static Meat getByName(string name) {
+            // Reinstatiate DatabaseEntities, in case record from another table is updated
+            db = new DatabaseEntities();
             return (from m in db.Meats where m.Name.Equals(name) select m).FirstOrDefault();
         }
 
         public static List<Meat> getAll() {
+            // Reinstatiate DatabaseEntities, in case record from another table is updated
+            db = new DatabaseEntities();
             return (from m in db.Meats select m).ToList<Meat>();
         }
 
         public static string update(int Id, string name) {
+            // Reinstatiate DatabaseEntities, in case record from another table is updated
+            db = new DatabaseEntities();
             Meat meat = get(Id);
 
             if (meat == null) {

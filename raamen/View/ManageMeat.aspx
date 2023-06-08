@@ -18,6 +18,9 @@
         </div>
         <div class="alert alert-danger" role="alert" runat="server" id="errorLbl" runat="server" visible="false">
         </div>
+        <p class="h4" id="noMeat" runat="server" visible="false">
+            There is no Meat yet 😐😖
+        </p>
         <asp:GridView ID="meatGV" runat="server" CssClass="table table-striped table-bordered border-primary" EditRowStyle-CssClass="row" HeaderStyle-CssClass="table-dark" AutoGenerateColumns="False" OnRowDeleting="meatGV_RowDeleting" OnRowEditing="meatGV_RowEditing">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Meat ID" />

@@ -11,7 +11,7 @@ namespace raamen.Controller {
                 return validateRamen;
             }
 
-            return RamenHandler.add(name, borth, int.Parse(price));
+            return RamenHandler.add(meatName, name, borth, int.Parse(price));
         }
 
         public static string validateRamenData(string meatName, string name, string borth, string price) {
@@ -65,7 +65,7 @@ namespace raamen.Controller {
                 return validateRamen;
             }
 
-            return RamenHandler.update(id, name, broth, int.Parse(price));
+            return RamenHandler.update(id, meatName, name, broth, int.Parse(price));
         }
     }
 }

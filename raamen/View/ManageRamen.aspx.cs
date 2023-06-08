@@ -1,6 +1,7 @@
 ﻿using raamen.Controller;
 using raamen.Model;
 using System;
+using System.Collections.Generic;
 using System.Web.UI.WebControls;
 
 namespace raamen.View {
@@ -18,7 +19,13 @@ namespace raamen.View {
         }
 
         protected void loadData() {
-            ramenGV.DataSource = RamenController.getAll();
+            List<Ramen> ramens = RamenController.getAll();
+
+            if (ramens.Count == 0) {
+                noRamen.Visible = true;
+            }
+
+            ramenGV.DataSource = ramens;
             ramenGV.DataBind();
         }
 

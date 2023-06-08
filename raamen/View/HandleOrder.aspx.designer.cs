@@ -22,6 +22,15 @@ namespace raamen.View {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl successLbl;
 
         /// <summary>
+        /// noQueue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl noQueue;
+
+        /// <summary>
         /// handleGV control.
         /// </summary>
         /// <remarks>

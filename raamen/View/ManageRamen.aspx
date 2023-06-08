@@ -19,6 +19,9 @@
         </div>
         <div class="alert alert-danger" role="alert" runat="server" id="errorLbl" runat="server" visible="false">
         </div>
+        <p class="h4" id="noRamen" runat="server" visible="false">
+            There is no Ramen yet 😐😖
+        </p>
         <asp:GridView ID="ramenGV" runat="server" CssClass="table table-striped table-bordered border-primary" EditRowStyle-CssClass="row" HeaderStyle-CssClass="table-dark" AutoGenerateColumns="False" OnRowDeleting="ramenGV_RowDeleting" OnRowEditing="ramenGV_RowEditing">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Ramen ID" />

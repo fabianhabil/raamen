@@ -1,6 +1,7 @@
 ﻿using raamen.Controller;
 using raamen.Model;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI.WebControls;
 
@@ -38,7 +39,15 @@ namespace raamen.View {
         }
 
         protected void bindData() {
-            handleGV.DataSource = TransactionController.getUnhandledTransaction();
+            List<Header> headers = TransactionController.getUnhandledTransaction();
+
+            if (headers.Count == 0) {
+                noQueue.Visible = true;
+            } else {
+                noQueue.Visible = false;
+            }
+
+            handleGV.DataSource = headers;
             handleGV.DataBind();
         }
     }
