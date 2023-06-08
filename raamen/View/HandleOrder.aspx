@@ -4,7 +4,7 @@
     <title>Handle Order - Raamen</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="min-height: 88vh" class="d-flex flex-column gap-4 pb-2 table-wrapper justify-content-center">
+    <div style="min-height: 88vh" class="d-flex flex-column gap-3 pb-2 table-wrapper justify-content-center">
         <p class="h2">Handle Order</p>
         <div class="alert alert-success" role="alert" runat="server" id="successLbl" visible="false">
         </div>

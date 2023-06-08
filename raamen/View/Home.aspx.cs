@@ -1,6 +1,7 @@
 ﻿using raamen.Controller;
 using raamen.Model;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace raamen.View {
@@ -20,7 +21,13 @@ namespace raamen.View {
 
                 if (user.Role.Name.Equals("Staff")) {
                     div_staff.Visible = true;
-                    userGV.DataSource = UserController.getUserByRole(1);
+                    List<User> users = UserController.getUserByRole(1);
+
+                    if (users.Count == 0) {
+                        noCustomer.Visible = true;
+                    }
+
+                    userGV.DataSource = users;
                     userGV.DataBind();
                 }
 

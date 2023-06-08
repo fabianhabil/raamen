@@ -11,8 +11,11 @@
         <div id="div_user" runat="server" visible="false">
             You are a customer.
         </div>
-        <div id="div_staff" runat="server" visible="false" class="d-flex flex-column gap-2 table-wrapper">
+        <div id="div_staff" runat="server" visible="false" class="d-flex flex-column gap-3 table-wrapper">
             <p class="h2">Customer Data</p>
+            <p class="h4" id="noCustomer" runat="server" visible="false">
+                There is no Customer Registered yet 😐😖
+            </p>
             <asp:GridView ID="userGV" runat="server" CssClass="table table-striped table-bordered border-primary" EditRowStyle-CssClass="row" HeaderStyle-CssClass="table-dark" AutoGenerateColumns="False">
                 <Columns>
                     <asp:BoundField DataField="Username" HeaderText="Username" />
@@ -23,7 +26,7 @@
                 <HeaderStyle CssClass="table-dark"></HeaderStyle>
             </asp:GridView>
         </div>
-        <div id="div_admin" runat="server" visible="false" class="d-flex flex-column gap-2 table-wrapper">
+        <div id="div_admin" runat="server" visible="false" class="d-flex flex-column gap-3 table-wrapper">
             <p class="h2">Customer and Staff Data</p>
             <asp:GridView ID="user_staffGV" runat="server" CssClass="table table-striped table-bordered border-primary" EditRowStyle-CssClass="row" HeaderStyle-CssClass="table-dark" AutoGenerateColumns="False">
                 <Columns>
