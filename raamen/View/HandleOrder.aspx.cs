@@ -34,7 +34,7 @@ namespace raamen.View {
             // by using aggregate Sum in LINQ.
             if (e.Row.RowType == DataControlRowType.DataRow) {
                 Header transaction = (Header)e.Row.DataItem;
-                e.Row.Cells[2].Text = transaction.Details.Sum(d => d.Quantity).ToString() + " ramen";
+                e.Row.Cells[3].Text = transaction.Details.Sum(d => d.Quantity).ToString() + " ramen";
             }
         }
 

@@ -15,6 +15,8 @@ namespace raamen.Repository {
         }
 
         public static User getByUsername(string username) {
+            // Reinstatiate DatabaseEntities, in case record from another table is updated
+            db = new DatabaseEntities();
             return (from u in db.Users where u.Username == username select u).FirstOrDefault();
         }
 
@@ -29,6 +31,8 @@ namespace raamen.Repository {
         }
 
         public static List<User> getByRole(int roleId) {
+            // Reinstatiate DatabaseEntities, in case record from another table is updated
+            db = new DatabaseEntities();
             return (from u in db.Users where u.RoleId == roleId select u).ToList<User>();
         }
     }

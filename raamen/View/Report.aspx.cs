@@ -33,12 +33,16 @@ namespace raamen.View {
                     var drow = detailTable.NewRow();
                     drow["HeaderId"] = d.HeaderId;
                     drow["RamenId"] = d.RamenId;
-                    drow["Quantity"] = d.Quantity + " pcs";
                     drow["RamenName"] = d.Ramen.Name;
+                    drow["MeatName"] = d.Ramen.Meat.Name;
+                    drow["Quantity"] = d.Quantity + " pcs";
                     drow["Price"] = "Rp" + d.Ramen.Price.ToString();
+                    drow["CustomerName"] = h.Customer.Username;
+                    drow["StaffName"] = h.Staff.Username;
+                    drow["TotalRamen"] = h.Details.Sum(dChildren => dChildren.Quantity).ToString() + " pcs";
+                    drow["TotalPrice"] = "Rp" + h.Details.Sum(dChildren => dChildren.Quantity * dChildren.Ramen.Price).ToString();
                     detailTable.Rows.Add(drow);
                 }
-
             }
             return data;
         }

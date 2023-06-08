@@ -634,6 +634,16 @@ namespace raamen.Dataset {
             
             private global::System.Data.DataColumn columnPrice;
             
+            private global::System.Data.DataColumn columnMeatName;
+            
+            private global::System.Data.DataColumn columnTotalRamen;
+            
+            private global::System.Data.DataColumn columnCustomerName;
+            
+            private global::System.Data.DataColumn columnStaffName;
+            
+            private global::System.Data.DataColumn columnTotalPrice;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public Transaction_DetailDataTable() {
@@ -709,6 +719,46 @@ namespace raamen.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MeatNameColumn {
+                get {
+                    return this.columnMeatName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TotalRamenColumn {
+                get {
+                    return this.columnTotalRamen;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CustomerNameColumn {
+                get {
+                    return this.columnCustomerName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn StaffNameColumn {
+                get {
+                    return this.columnStaffName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TotalPriceColumn {
+                get {
+                    return this.columnTotalPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -744,14 +794,19 @@ namespace raamen.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Transaction_DetailRow AddTransaction_DetailRow(Transaction_HeaderRow parentTransaction_HeaderRowByTransaction_Header_Transaction_Detail, string RamenId, string Quantity, string RamenName, string Price) {
+            public Transaction_DetailRow AddTransaction_DetailRow(Transaction_HeaderRow parentTransaction_HeaderRowByTransaction_Header_Transaction_Detail, string RamenId, string Quantity, string RamenName, string Price, string MeatName, string TotalRamen, string CustomerName, string StaffName, string TotalPrice) {
                 Transaction_DetailRow rowTransaction_DetailRow = ((Transaction_DetailRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         RamenId,
                         Quantity,
                         RamenName,
-                        Price};
+                        Price,
+                        MeatName,
+                        TotalRamen,
+                        CustomerName,
+                        StaffName,
+                        TotalPrice};
                 if ((parentTransaction_HeaderRowByTransaction_Header_Transaction_Detail != null)) {
                     columnValuesArray[0] = parentTransaction_HeaderRowByTransaction_Header_Transaction_Detail[0];
                 }
@@ -782,6 +837,11 @@ namespace raamen.Dataset {
                 this.columnQuantity = base.Columns["Quantity"];
                 this.columnRamenName = base.Columns["RamenName"];
                 this.columnPrice = base.Columns["Price"];
+                this.columnMeatName = base.Columns["MeatName"];
+                this.columnTotalRamen = base.Columns["TotalRamen"];
+                this.columnCustomerName = base.Columns["CustomerName"];
+                this.columnStaffName = base.Columns["StaffName"];
+                this.columnTotalPrice = base.Columns["TotalPrice"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -797,6 +857,16 @@ namespace raamen.Dataset {
                 base.Columns.Add(this.columnRamenName);
                 this.columnPrice = new global::System.Data.DataColumn("Price", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice);
+                this.columnMeatName = new global::System.Data.DataColumn("MeatName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMeatName);
+                this.columnTotalRamen = new global::System.Data.DataColumn("TotalRamen", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalRamen);
+                this.columnCustomerName = new global::System.Data.DataColumn("CustomerName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomerName);
+                this.columnStaffName = new global::System.Data.DataColumn("StaffName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStaffName);
+                this.columnTotalPrice = new global::System.Data.DataColumn("TotalPrice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalPrice);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1185,6 +1255,86 @@ namespace raamen.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MeatName {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransaction_Detail.MeatNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MeatName\' in table \'Transaction Detail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransaction_Detail.MeatNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TotalRamen {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransaction_Detail.TotalRamenColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalRamen\' in table \'Transaction Detail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransaction_Detail.TotalRamenColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CustomerName {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransaction_Detail.CustomerNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CustomerName\' in table \'Transaction Detail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransaction_Detail.CustomerNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string StaffName {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransaction_Detail.StaffNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'StaffName\' in table \'Transaction Detail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransaction_Detail.StaffNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TotalPrice {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransaction_Detail.TotalPriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalPrice\' in table \'Transaction Detail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransaction_Detail.TotalPriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public Transaction_HeaderRow Transaction_HeaderRow {
                 get {
                     return ((Transaction_HeaderRow)(this.GetParentRow(this.Table.ParentRelations["Transaction Header_Transaction Detail"])));
@@ -1252,6 +1402,66 @@ namespace raamen.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPriceNull() {
                 this[this.tableTransaction_Detail.PriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMeatNameNull() {
+                return this.IsNull(this.tableTransaction_Detail.MeatNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMeatNameNull() {
+                this[this.tableTransaction_Detail.MeatNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTotalRamenNull() {
+                return this.IsNull(this.tableTransaction_Detail.TotalRamenColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTotalRamenNull() {
+                this[this.tableTransaction_Detail.TotalRamenColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCustomerNameNull() {
+                return this.IsNull(this.tableTransaction_Detail.CustomerNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCustomerNameNull() {
+                this[this.tableTransaction_Detail.CustomerNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsStaffNameNull() {
+                return this.IsNull(this.tableTransaction_Detail.StaffNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetStaffNameNull() {
+                this[this.tableTransaction_Detail.StaffNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTotalPriceNull() {
+                return this.IsNull(this.tableTransaction_Detail.TotalPriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTotalPriceNull() {
+                this[this.tableTransaction_Detail.TotalPriceColumn] = global::System.Convert.DBNull;
             }
         }
         
