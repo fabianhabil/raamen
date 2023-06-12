@@ -18,7 +18,7 @@ namespace raamen.View {
 
                 transactions = TransactionController.getById(int.Parse(id));
 
-                if (transactions == null) {
+                if (transactions == null || (transactions.CustomerId != user?.Id && !user.Role.Name.Equals("Admin"))) {
                     Response.Redirect("/");
                     return;
                 }
