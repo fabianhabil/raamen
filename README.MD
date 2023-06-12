@@ -15,5 +15,6 @@
 1. Fabian Habil Ramdhan - 2501976503
 2. Kenrick Panca Dewanto - 2501986422
 3. Mahesa Insan Raushanfikir - 2501981024
+4. Devano Fernando Boes - 2501981005
 
 [Application Demo](https://youtu.be/8z9MwHWW5pA)
