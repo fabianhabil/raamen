@@ -17,5 +17,5 @@
 3. Mahesa Insan Raushanfikir - 2501981024
 4. Devano Fernando Boes - 2501981005
 
-[Application Demo](https://youtu.be/8z9MwHWW5pA)
+[Application Demo](https://youtu.be/8z9MwHWW5pA) <br/>
 [Documentation](https://drive.google.com/file/d/10DrZ9kOoM1TsHB5gp78CkmNGncLI7hKO/view?usp=sharing)
