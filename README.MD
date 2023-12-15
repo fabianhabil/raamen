@@ -2,7 +2,11 @@
 
 ## Package need to be installed to run the project
 1. This Database file version is version 852, if you are using newer version, just modify the connection and upgrade the database. (If you want to create new database, the query is in the folder query. Just make sure the database name is "Database", so the model layer is automatically connected).
-3. Crysal Report for Visual Studio 2019
+2. Crystal Report for Visual Studio 2019
+3. Download and copy Boostrap and Boostrap icons to the lib folder
+4. Download and copy the Crystal Report Assets to the root of the folder.
+
+### For step 3 and 4, another branch already included both of it.
 
 ## Important Notes To Run the Project
 
